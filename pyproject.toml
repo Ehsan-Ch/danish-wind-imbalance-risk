@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "danish-windrisk"
+version = "1.0.0"
+description = "Wind generation forecasting and transparent imbalance exposure research"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.24,<3"]
+
+[project.scripts]
+windrisk = "windrisk.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["windrisk*"]

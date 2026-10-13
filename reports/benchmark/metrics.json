@@ -1,0 +1,628 @@
+{
+  "test_start_utc": "2026-08-31T00:00:00+00:00",
+  "test_end_exclusive_utc": "2026-09-30T00:00:00+00:00",
+  "days": 30,
+  "share": 0.01,
+  "data_quality": {
+    "counts": {
+      "DK1_missing_generation_hours": 0,
+      "DK2_missing_generation_hours": 0,
+      "generation_records": 8784
+    },
+    "generation_versions": {
+      "Preliminary": 7728,
+      "Initial": 1056
+    }
+  },
+  "skipped": {},
+  "method": "Frozen direct ridge vs persistence, chronological model selection and held-out calibration",
+  "availability_assumption": "Hourly interval start + 2 hours (1 hour delivery + 1 hour reporting)",
+  "settlement_assumption": "Counterfactual nomination; flat intra-hour energy at quarterly DA/imbalance prices",
+  "metrics": {
+    "DK1_1": {
+      "area": "DK1",
+      "horizon_hours": 1,
+      "model": "ridge",
+      "forecast_count": 720,
+      "expected_forecasts": 720,
+      "mean_actual_mwh": 1941.1605693958334,
+      "mae_mwh": 350.42142284140635,
+      "rmse_mwh": 475.13994016707716,
+      "bias_mwh": -89.49790624797758,
+      "ridge_mae_mwh": 350.42142284140635,
+      "persistence_mae_mwh": 414.8749798875,
+      "coverage90": 0.8777777777777778,
+      "interval_mean_width_mwh": 1354.2022511633238,
+      "policies": {
+        "q10": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -47053.068358735356,
+          "gross_revenue_eur": 1593555.239958609,
+          "perfect_volume_revenue_eur": 1640608.3083173442,
+          "shortfall_mwh": 237.85280023501065,
+          "surplus_mwh": 3416.581044284942,
+          "stress_cost_eur": 109199.80613062461,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 5287.289061928131,
+            "historical_tail_mean95_eur": 7154.974768709257,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q50": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -41203.08331153728,
+          "gross_revenue_eur": 1599405.225005807,
+          "perfect_volume_revenue_eur": 1640608.3083173442,
+          "shortfall_mwh": 882.7526005578142,
+          "surplus_mwh": 1657.5358460406396,
+          "stress_cost_eur": 129713.6562067974,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 4275.208947412418,
+            "historical_tail_mean95_eur": 7347.486782239514,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q90": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -31254.344026103925,
+          "gross_revenue_eur": 1609353.9642912403,
+          "perfect_volume_revenue_eur": 1640608.3083173442,
+          "shortfall_mwh": 3845.176194068338,
+          "surplus_mwh": 313.0032987168663,
+          "stress_cost_eur": 392342.7018747555,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 12084.225405082743,
+            "historical_tail_mean95_eur": 13614.63152253646,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        }
+      },
+      "pinball_q10": 77.18411453333387,
+      "pinball_q50": 176.4089199026704,
+      "pinball_q90": 92.53063725722409
+    },
+    "DK1_6": {
+      "area": "DK1",
+      "horizon_hours": 6,
+      "model": "persistence",
+      "forecast_count": 720,
+      "expected_forecasts": 720,
+      "mean_actual_mwh": 1941.1605693958334,
+      "mae_mwh": 873.7187854833334,
+      "rmse_mwh": 1135.8817281446336,
+      "bias_mwh": -17.737425119444445,
+      "ridge_mae_mwh": 748.8417860843526,
+      "persistence_mae_mwh": 873.7187854833334,
+      "coverage90": 0.8111111111111111,
+      "interval_mean_width_mwh": 2687.0490070166666,
+      "policies": {
+        "q10": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -63155.205674760684,
+          "gross_revenue_eur": 1577453.1026425837,
+          "perfect_volume_revenue_eur": 1640608.3083173442,
+          "shortfall_mwh": 551.56603544,
+          "surplus_mwh": 7800.43308176,
+          "stress_cost_eur": 250167.430588,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 12523.65953326811,
+            "historical_tail_mean95_eur": 14703.926555931299,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q50": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -50757.080336228006,
+          "gross_revenue_eur": 1589851.2279811162,
+          "perfect_volume_revenue_eur": 1640608.3083173442,
+          "shortfall_mwh": 3051.89799199,
+          "surplus_mwh": 3239.43620565,
+          "stress_cost_eur": 386175.70434025,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 12012.887991049318,
+            "historical_tail_mean95_eur": 14213.539015772029,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q90": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -35264.77048808342,
+          "gross_revenue_eur": 1605343.5378292608,
+          "perfect_volume_revenue_eur": 1640608.3083173442,
+          "shortfall_mwh": 7634.825970180002,
+          "surplus_mwh": 1115.5144894399996,
+          "stress_cost_eur": 791370.4592540002,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 22016.122003388184,
+            "historical_tail_mean95_eur": 25280.784622848856,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        }
+      },
+      "pinball_q10": 177.2851027877778,
+      "pinball_q50": 436.89820816944444,
+      "pinball_q90": 245.47856076583332
+    },
+    "DK1_24": {
+      "area": "DK1",
+      "horizon_hours": 24,
+      "model": "ridge",
+      "forecast_count": 720,
+      "expected_forecasts": 720,
+      "mean_actual_mwh": 1941.1605693958334,
+      "mae_mwh": 1079.7698341951495,
+      "rmse_mwh": 1306.0035945158152,
+      "bias_mwh": -502.90866947571664,
+      "ridge_mae_mwh": 1079.7698341951495,
+      "persistence_mae_mwh": 1211.9360561833334,
+      "coverage90": 0.8472222222222222,
+      "interval_mean_width_mwh": 3318.150488087324,
+      "policies": {
+        "q10": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -54164.85676446479,
+          "gross_revenue_eur": 1586443.4515528795,
+          "perfect_volume_revenue_eur": 1640608.3083173442,
+          "shortfall_mwh": 199.41123593548951,
+          "surplus_mwh": 11689.889323234238,
+          "stress_cost_eur": 312188.3566744049,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 11253.829389697312,
+            "historical_tail_mean95_eur": 17318.57804600565,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q50": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -28285.869151099825,
+          "gross_revenue_eur": 1612322.4391662444,
+          "perfect_volume_revenue_eur": 1640608.3083173442,
+          "shortfall_mwh": 3426.4217003369276,
+          "surplus_mwh": 3835.320789628645,
+          "stress_cost_eur": 438525.18977440894,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 13381.09447138009,
+            "historical_tail_mean95_eur": 14126.544109770046,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q90": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -4197.92984198745,
+          "gross_revenue_eur": 1636410.3784753568,
+          "perfect_volume_revenue_eur": 1640608.3083173442,
+          "shortfall_mwh": 10573.928284243379,
+          "surplus_mwh": 554.8027614792958,
+          "stress_cost_eur": 1071262.8974613203,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 21263.127992627768,
+            "historical_tail_mean95_eur": 23162.782178114197,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        }
+      },
+      "pinball_q10": 187.28597842574507,
+      "pinball_q50": 504.28767291427584,
+      "pinball_q90": 216.21046024384776
+    },
+    "DK2_1": {
+      "area": "DK2",
+      "horizon_hours": 1,
+      "model": "ridge",
+      "forecast_count": 720,
+      "expected_forecasts": 720,
+      "mean_actual_mwh": 574.9868036805556,
+      "mae_mwh": 142.03226879556092,
+      "rmse_mwh": 201.1586199437512,
+      "bias_mwh": -30.995458692525478,
+      "ridge_mae_mwh": 142.03226879556092,
+      "persistence_mae_mwh": 154.21991962083334,
+      "coverage90": 0.9166666666666666,
+      "interval_mean_width_mwh": 595.1926368111377,
+      "policies": {
+        "q10": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -30650.60631375654,
+          "gross_revenue_eur": 463862.7950341916,
+          "perfect_volume_revenue_eur": 494513.4013479481,
+          "shortfall_mwh": 100.24851669699333,
+          "surplus_mwh": 1498.235114814355,
+          "stress_cost_eur": 47480.72954005821,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 3841.425166279568,
+            "historical_tail_mean95_eur": 4761.754491124286,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q50": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -33688.979898675214,
+          "gross_revenue_eur": 460824.4214492729,
+          "perfect_volume_revenue_eur": 494513.4013479481,
+          "shortfall_mwh": 420.35207437093146,
+          "surplus_mwh": 597.914294868844,
+          "stress_cost_eur": 56983.06480881424,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 4965.588254690443,
+            "historical_tail_mean95_eur": 7515.107197110508,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q90": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -36618.66135496642,
+          "gross_revenue_eur": 457894.7399929817,
+          "perfect_volume_revenue_eur": 494513.4013479481,
+          "shortfall_mwh": 1689.5528053016842,
+          "surplus_mwh": 109.12294764168054,
+          "stress_cost_eur": 171683.35422121044,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 8208.646353282702,
+            "historical_tail_mean95_eur": 13218.00877204604,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        }
+      },
+      "pinball_q10": 33.339885626212435,
+      "pinball_q50": 70.71294230831775,
+      "pinball_q90": 37.10637963995568
+    },
+    "DK2_6": {
+      "area": "DK2",
+      "horizon_hours": 6,
+      "model": "ridge",
+      "forecast_count": 720,
+      "expected_forecasts": 720,
+      "mean_actual_mwh": 574.9868036805556,
+      "mae_mwh": 275.1315471261575,
+      "rmse_mwh": 349.8658024712787,
+      "bias_mwh": -88.36041174969839,
+      "ridge_mae_mwh": 275.1315471261575,
+      "persistence_mae_mwh": 309.2818689625,
+      "coverage90": 0.8986111111111111,
+      "interval_mean_width_mwh": 934.5730042820725,
+      "policies": {
+        "q10": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -29929.83092011284,
+          "gross_revenue_eur": 464583.5704278353,
+          "perfect_volume_revenue_eur": 494513.4013479481,
+          "shortfall_mwh": 137.09921791790597,
+          "surplus_mwh": 2552.3986543255633,
+          "stress_cost_eur": 77519.88814992967,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 6471.822080418705,
+            "historical_tail_mean95_eur": 7571.2126416772135,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q50": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -34625.217488901384,
+          "gross_revenue_eur": 459888.1838590467,
+          "perfect_volume_revenue_eur": 494513.4013479481,
+          "shortfall_mwh": 713.4534107507427,
+          "surplus_mwh": 1252.9827625782252,
+          "stress_cost_eur": 102669.91013952991,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 6840.338223772639,
+            "historical_tail_mean95_eur": 8322.703096050696,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q90": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -40628.43163948536,
+          "gross_revenue_eur": 453884.96970846277,
+          "perfect_volume_revenue_eur": 494513.4013479481,
+          "shortfall_mwh": 3219.8078976435745,
+          "surplus_mwh": 157.03335477652487,
+          "stress_cost_eur": 325906.62363377056,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 10270.250352893549,
+            "historical_tail_mean95_eur": 18517.647046152684,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        }
+      },
+      "pinball_q10": 52.58738354981552,
+      "pinball_q50": 136.55806759228943,
+      "pinball_q90": 64.34872348100413
+    },
+    "DK2_24": {
+      "area": "DK2",
+      "horizon_hours": 24,
+      "model": "ridge",
+      "forecast_count": 720,
+      "expected_forecasts": 720,
+      "mean_actual_mwh": 574.9868036805556,
+      "mae_mwh": 346.76756320440734,
+      "rmse_mwh": 437.6111456810293,
+      "bias_mwh": -159.67634555173535,
+      "ridge_mae_mwh": 346.76756320440734,
+      "persistence_mae_mwh": 423.3786716430555,
+      "coverage90": 0.8638888888888889,
+      "interval_mean_width_mwh": 1130.719340198742,
+      "policies": {
+        "q10": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -12809.689715365437,
+          "gross_revenue_eur": 481703.7116325827,
+          "perfect_volume_revenue_eur": 494513.4013479481,
+          "shortfall_mwh": 114.55690934292312,
+          "surplus_mwh": 3400.846416513789,
+          "stress_cost_eur": 96476.85134713704,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 7187.048126656284,
+            "historical_tail_mean95_eur": 8510.251600791134,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q50": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -16868.472507822637,
+          "gross_revenue_eur": 477644.9288401255,
+          "perfect_volume_revenue_eur": 494513.4013479481,
+          "shortfall_mwh": 840.7289555563916,
+          "surplus_mwh": 1588.212711022103,
+          "stress_cost_eur": 123778.21333119174,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 4883.4773482424935,
+            "historical_tail_mean95_eur": 8463.798978649327,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        },
+        "q90": {
+          "priced_hours": 720,
+          "share": 0.01,
+          "imbalance_effect_eur": -24623.886367869,
+          "gross_revenue_eur": 469889.51498007914,
+          "perfect_volume_revenue_eur": 494513.4013479481,
+          "shortfall_mwh": 4040.6733297965793,
+          "surplus_mwh": 134.42379302327993,
+          "stress_cost_eur": 407427.9278052399,
+          "complete_days": 30,
+          "daily_loss": {
+            "historical_var95_eur": 8828.286305414405,
+            "historical_tail_mean95_eur": 21249.41345710091,
+            "tail_observations": 2,
+            "observations": 30
+          }
+        }
+      },
+      "pinball_q10": 61.55359167500135,
+      "pinball_q50": 168.67650462350656,
+      "pinball_q90": 72.92343704175136
+    }
+  },
+  "model_audit": {
+    "DK1_1": {
+      "horizon_hours": 1,
+      "selected_model": "ridge",
+      "validation_mae_mwh": {
+        "ridge": 356.7308289847893,
+        "persistence": 368.8502901904762
+      },
+      "fit_rows": 2804,
+      "selection_rows": 336,
+      "calibration_rows": 336,
+      "fit_first": "2026-04-08T01:00:00+00:00",
+      "fit_last": "2026-08-02T20:00:00+00:00",
+      "selection_first": "2026-08-02T21:00:00+00:00",
+      "selection_last": "2026-08-16T20:00:00+00:00",
+      "calibration_first": "2026-08-16T21:00:00+00:00",
+      "calibration_last": "2026-08-30T20:00:00+00:00",
+      "label_availability_cutoff_exclusive": "2026-08-30T21:00:00+00:00",
+      "residual_adjustments_mwh": {
+        "0.1": -354.7828602375302,
+        "0.5": -18.110877846859317,
+        "0.9": 580.0774750467931
+      },
+      "interval_radius_mwh": 698.5674069927118
+    },
+    "DK1_6": {
+      "horizon_hours": 6,
+      "selected_model": "persistence",
+      "validation_mae_mwh": {
+        "ridge": 701.2634986815684,
+        "persistence": 698.6255892113096
+      },
+      "fit_rows": 2794,
+      "selection_rows": 336,
+      "calibration_rows": 336,
+      "fit_first": "2026-04-08T06:00:00+00:00",
+      "fit_last": "2026-08-02T15:00:00+00:00",
+      "selection_first": "2026-08-02T16:00:00+00:00",
+      "selection_last": "2026-08-16T15:00:00+00:00",
+      "calibration_first": "2026-08-16T16:00:00+00:00",
+      "calibration_last": "2026-08-30T15:00:00+00:00",
+      "label_availability_cutoff_exclusive": "2026-08-30T16:00:00+00:00",
+      "residual_adjustments_mwh": {
+        "0.1": -1168.8817635,
+        "0.5": -8.309549000000004,
+        "0.9": 923.1973530000002
+      },
+      "interval_radius_mwh": 1494.213214
+    },
+    "DK1_24": {
+      "horizon_hours": 24,
+      "selected_model": "ridge",
+      "validation_mae_mwh": {
+        "ridge": 1190.573676641096,
+        "persistence": 1363.1191181845238
+      },
+      "fit_rows": 2758,
+      "selection_rows": 336,
+      "calibration_rows": 336,
+      "fit_first": "2026-04-09T00:00:00+00:00",
+      "fit_last": "2026-08-01T21:00:00+00:00",
+      "selection_first": "2026-08-01T22:00:00+00:00",
+      "selection_last": "2026-08-15T21:00:00+00:00",
+      "calibration_first": "2026-08-15T22:00:00+00:00",
+      "calibration_last": "2026-08-29T21:00:00+00:00",
+      "label_availability_cutoff_exclusive": "2026-08-29T22:00:00+00:00",
+      "residual_adjustments_mwh": {
+        "0.1": -1123.0715576985438,
+        "0.5": 446.1171292963114,
+        "0.9": 1894.453880970728
+      },
+      "interval_radius_mwh": 1898.514066182568
+    },
+    "DK2_1": {
+      "horizon_hours": 1,
+      "selected_model": "ridge",
+      "validation_mae_mwh": {
+        "ridge": 118.26658300458675,
+        "persistence": 120.195782875
+      },
+      "fit_rows": 2804,
+      "selection_rows": 336,
+      "calibration_rows": 336,
+      "fit_first": "2026-04-08T01:00:00+00:00",
+      "fit_last": "2026-08-02T20:00:00+00:00",
+      "selection_first": "2026-08-02T21:00:00+00:00",
+      "selection_last": "2026-08-16T20:00:00+00:00",
+      "calibration_first": "2026-08-16T21:00:00+00:00",
+      "calibration_last": "2026-08-30T20:00:00+00:00",
+      "label_availability_cutoff_exclusive": "2026-08-30T21:00:00+00:00",
+      "residual_adjustments_mwh": {
+        "0.1": -179.28112541009654,
+        "0.5": 6.334039178926503,
+        "0.9": 250.4996055897482
+      },
+      "interval_radius_mwh": 327.8042256099218
+    },
+    "DK2_6": {
+      "horizon_hours": 6,
+      "selected_model": "ridge",
+      "validation_mae_mwh": {
+        "ridge": 204.9467269443058,
+        "persistence": 220.45808719345237
+      },
+      "fit_rows": 2794,
+      "selection_rows": 336,
+      "calibration_rows": 336,
+      "fit_first": "2026-04-08T06:00:00+00:00",
+      "fit_last": "2026-08-02T15:00:00+00:00",
+      "selection_first": "2026-08-02T16:00:00+00:00",
+      "selection_last": "2026-08-16T15:00:00+00:00",
+      "calibration_first": "2026-08-16T16:00:00+00:00",
+      "calibration_last": "2026-08-30T15:00:00+00:00",
+      "label_availability_cutoff_exclusive": "2026-08-30T16:00:00+00:00",
+      "residual_adjustments_mwh": {
+        "0.1": -281.9743604621922,
+        "0.5": 13.425779551436904,
+        "0.9": 513.7457649256775
+      },
+      "interval_radius_mwh": 545.8833132509935
+    },
+    "DK2_24": {
+      "horizon_hours": 24,
+      "selected_model": "ridge",
+      "validation_mae_mwh": {
+        "ridge": 289.572459613204,
+        "persistence": 350.7397278125
+      },
+      "fit_rows": 2758,
+      "selection_rows": 336,
+      "calibration_rows": 336,
+      "fit_first": "2026-04-09T00:00:00+00:00",
+      "fit_last": "2026-08-01T21:00:00+00:00",
+      "selection_first": "2026-08-01T22:00:00+00:00",
+      "selection_last": "2026-08-15T21:00:00+00:00",
+      "calibration_first": "2026-08-15T22:00:00+00:00",
+      "calibration_last": "2026-08-29T21:00:00+00:00",
+      "label_availability_cutoff_exclusive": "2026-08-29T22:00:00+00:00",
+      "residual_adjustments_mwh": {
+        "0.1": -313.7685540885902,
+        "0.5": 55.859157292608785,
+        "0.9": 702.2110034369158
+      },
+      "interval_radius_mwh": 716.5282403495556
+    }
+  },
+  "provenance": {
+    "start_local_inclusive": "2026-04-01",
+    "end_local_exclusive": "2026-10-01",
+    "sources": {
+      "generation": {
+        "dataset": "GenerationProdTypeExchange",
+        "url": "https://api.energidataservice.dk/dataset/GenerationProdTypeExchange?start=2026-04-01&end=2026-10-01&filter=%7B%22PriceArea%22%3A+%5B%22DK1%22%2C+%22DK2%22%5D%7D&sort=TimeUTC%2CPriceArea&columns=TimeUTC%2CPriceArea%2CVersion%2COffshoreWindPower%2COnshoreWindPower&limit=0",
+        "sha256": "c60410fcc29b4d3ff50c252aef6e47b496ba910c5aa462a3454dc2ec216513e1",
+        "records": 8784,
+        "retrieved_utc": "2026-10-12T20:52:31.853878+00:00",
+        "resolution": "1 hour (PT1H)",
+        "caution": "The dataset will change as part of the [transition to DataHub 3.0](https://www.energidataservice.dk/news#154).\\\nThe URL/endpoint will remain unchanged. However, the values will be calculated using a different method. \nWe are aware that the values do not exactly match those reported under Article 16.1b&c on the Transparency Platform, and we are currently investigating a solution.\n\n**Expected implementation date: October / November.**\n\n"
+      },
+      "imbalance": {
+        "dataset": "ImbalancePrice",
+        "url": "https://api.energidataservice.dk/dataset/ImbalancePrice?start=2026-04-01&end=2026-10-01&filter=%7B%22PriceArea%22%3A+%5B%22DK1%22%2C+%22DK2%22%5D%7D&sort=TimeUTC%2CPriceArea&columns=TimeUTC%2CPriceArea%2CImbalancePriceEUR&limit=0",
+        "sha256": "98d1c75076dcd33a5c12ab63df4b146eb4d766ac1cb46e2e9e4aace0d23f9dfc",
+        "records": 35136,
+        "retrieved_utc": "2026-10-12T20:52:32.457970+00:00",
+        "resolution": "15 minutes (PT15M)",
+        "caution": ""
+      },
+      "dayahead": {
+        "dataset": "DayAheadPrices",
+        "url": "https://api.energidataservice.dk/dataset/DayAheadPrices?start=2026-04-01&end=2026-10-01&filter=%7B%22PriceArea%22%3A+%5B%22DK1%22%2C+%22DK2%22%5D%7D&sort=TimeUTC%2CPriceArea&columns=TimeUTC%2CPriceArea%2CDayAheadPriceEUR&limit=0",
+        "sha256": "19e47edf2adfee54874f159303a0c4508e98d5103b647598748c49a37a143bfa",
+        "records": 35136,
+        "retrieved_utc": "2026-10-12T20:52:33.105780+00:00",
+        "resolution": "15 minutes (PT15M)",
+        "caution": ""
+      }
+    }
+  }
+}
